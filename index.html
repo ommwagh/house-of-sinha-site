@@ -8,6 +8,19 @@
   <meta property="og:image" content="assets/og-image.png">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <style>
+    .hero-title {
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    font-weight: 900;
+    letter-spacing: .5px;
+    margin: 0 0 6px;
+    }
+
+    .hero-tagline {
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    color: #f5e7ff;
+    opacity: .95;
+    margin: 0 0 18px;
+    }
     :root{ --black:#0a0a0a; --black2:#121212; --ink:#eaeaea; --muted:#bdbdbd; --neon:#ff1744; --neonD:#d50000; --stroke:#2a2a2a; --card:#111111; }
     *{box-sizing:border-box} html{scroll-behavior:smooth}
     body{margin:0;background:linear-gradient(180deg,var(--black),var(--black2));color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Inter,Arial,sans-serif}
@@ -79,8 +92,6 @@
       <div class="nav-links">
         <a href="#about" class="nav-link">About</a>
         <a href="#details" class="nav-link">Event</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#posters" class="nav-link">Posters</a>
         <a href="#faq" class="nav-link">FAQ</a>
         <a href="https://fatso.ma/2rF5" target="_blank" class="btn neon-shadow">🎟️ Buy Tickets</a>
 
@@ -96,7 +107,8 @@
     </div>
     <div class="hero-inner reveal">
       <span class="eyebrow">Coventry ✦ Birmingham ✦ Warwick</span>
-      <h1>Too Glam to give a Dhamaka!</h1>
+      <h1 class="hero-title">Diwali Bash</h1>
+      <p class="hero-tagline">Too Glam to give a Dhamaka!</p>
       <p>Diwali Night 2025 at <strong>Kasbah</strong> — Thursday, <strong>16 October</strong>, 7:00 PM • Dress Code: <em>Desi/Ethnic</em></p>
       <div class="stack center">
         <a href="https://fatso.ma/2rF5" target="_blank" class="cta neon-shadow">🎟️ Buy Tickets</a>
@@ -140,7 +152,7 @@
 
       <div class="price">
         <h3>Pehla Dhamaka</h3>
-        <div class="value">£X</div>
+        <div class="value"></div>
         <ul>
           <li>Limited quantity</li>
           <li>Fast entry</li>
@@ -151,7 +163,7 @@
 
       <div class="price">
         <h3>Dusra Dhamaka</h3>
-        <div class="value">£Y</div>
+        <div class="value"></div>
         <ul>
           <li>Standard entry</li>
           <li>Access to all zones</li>
@@ -162,7 +174,7 @@
 
       <div class="price">
         <h3>V.I.P. (4)</h3>
-        <div class="value">£Z</div>
+        <div class="value"></div>
         <ul>
           <li>Save as a crew</li>
           <li>Priority group entry</li>
