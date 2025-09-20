@@ -176,6 +176,109 @@
         if (!open) { a.style.maxHeight = a.scrollHeight + 'px'; btn.querySelector('span').textContent = '−'; }
       });
     });
-  </script>
+  </section>
+  <section class="band" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');">
+    <div class="inside">
+      <h2 class="section-title">Celebrate Together</h2>
+      <p class="muted">One community • One unforgettable night • Too Glam to give a Dhamaka!</p>
+      <div class="stack"><a href="#tickets" class="cta">Reserve Your Spot</a></div>
+    </div>
+  </section>
+
+  <section id="details" class="reveal">
+  <div class="container">
+    <h2 class="section-title">Event Details</h2>
+    <p class="muted">📅 Thursday, 16 October 2025 • 🕖 7:00 PM • 📍 Venue: <strong>Kasbah</strong> • 👗 Dress Code: Desi/Ethnic</p>
+    <div class="tickets" id="tickets">
+
+      <div class="price">
+        <h3>Pehla Dhamaka</h3>
+        <div class="value"></div>
+        <ul>
+          <li>Limited quantity</li>
+          <li>Fast entry</li>
+          <li>Free glow band</li>
+        </ul>
+        <a class="cta buy" href="https://fatso.ma/2rF5" target="_blank">Buy Now</a>
+      </div>
+
+      <div class="price">
+        <h3>Dusra Dhamaka</h3>
+        <div class="value"></div>
+        <ul>
+          <li>Standard entry</li>
+          <li>Access to all zones</li>
+          <li>Re-entry allowed</li>
+        </ul>
+        <a class="cta buy" href="https://fatso.ma/2rF5" target="_blank">Buy Now</a>
+      </div>
+
+      <div class="price">
+        <h3>V.I.P. (4)</h3>
+        <div class="value"></div>
+        <ul>
+          <li>Save as a crew</li>
+          <li>Priority group entry</li>
+          <li>Group Table</li>
+        </ul>
+        <a class="cta buy" href="https://fatso.ma/2rF5" target="_blank">Buy Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <div class="gallery">
+  <img src="g1.jpg" alt="Club Celebration" loading="lazy">
+  <img src="g2.jpg" alt="Sparkels and Crackers" loading="lazy">
+  <img src="g3.jpg" alt="Champagne Bottles" loading="lazy">
+</div>
+
+
+<section class="reveal">
+  <div class="container">
+    <h2 class="section-title">What People Say</h2>
+    <div class="testimonials">
+      <div class="quote">
+        <p>“Electric atmosphere — it felt like Mumbai nightlife!”</p>
+        <div class="who">— Aanya, Coventry</div>
+      </div>
+      <div class="quote">
+        <p>“Music was on point and super friendly crowd.”</p>
+        <div class="who">— Rohan, Warwick</div>
+      </div>
+      <div class="quote">
+        <p>“Well organized, vibrant, and Insta-worthy throughout.”</p>
+        <div class="who">— Meera, Birmingham</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="faq" class="reveal">
+    <div class="container faq">
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-item"><button class="faq-q">Do I need to bring an ID? <span>＋</span></button><div class="faq-a"><p>Yes, bring a valid photo ID if the venue requests it or for age‑restricted purchases.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Are tickets refundable? <span>＋</span></button><div class="faq-a"><p>Tickets are non‑refundable but transferable — share the QR/confirmation email.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can non‑students attend? <span>＋</span></button><div class="faq-a"><p>Absolutely! Everyone is welcome to celebrate with us.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Is the venue accessible? <span>＋</span></button><div class="faq-a"><p>Yes, wheelchair accessible. Email us for accommodations.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Dress code? <span>＋</span></button><div class="faq-a"><p>Desi/Ethnic encouraged. Comfortable shoes for the dance floor!</p></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="row">
+      <p><strong>Contact</strong> • <a href="mailto:houseofsinha@gmail.com">houseofsinha@gmail.com</a> • <a href="https://instagram.com/houseofsinha" target="_blank">@houseofsinha</a> • WhatsApp: Join via QR on poster</p>
+      <p>© 2025 House of Sinha. Designed with ❤ for the community.</p>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let i = 0; setInterval(()=>{slides[i].classList.remove('active'); i=(i+1)%slides.length; slides[i].classList.add('active')}, 4000);
+    const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });},{threshold: .15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a = btn.parentElement.querySelector('.faq-a');const open = a.style.maxHeight && a.style.maxHeight !== '0px';document.querySelectorAll('.faq-a').forEach(x=>x.style.maxHeight='0px');document.querySelectorAll('.faq-q span').forEach(s=>s.textContent='＋');if(!open){ a.style.maxHeight=a.scrollHeight+'px'; btn.querySelector('span').textContent='−'; }});});
+  </script> 
 </body>
 </html>
