@@ -1,312 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Too Glam to give a Dhamaka! • Diwali Night 2025</title>
-  <meta name="description" content="Diwali Night 2025 — Too Glam to give a Dhamaka! at Kasbah. Live DJ & Bollywood, eco-friendly firecrackers, food & drinks. Thu 16 Oct, 7 PM.">
-  <meta property="og:image" content="assets/og-image.png">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House of Sinha – Diwali Bash 2025</title>
   <style>
-    .hero-title {
-    font-size: clamp(2.6rem, 6vw, 4rem);
-    font-weight: 900;
-    letter-spacing: .5px;
-    margin: 0 0 6px;
-    }
-
-    .hero-tagline {
-    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
-    color: #f5e7ff;
-    opacity: .95;
-    margin: 0 0 18px;
-    }
-    :root{ --black:#0a0a0a; --black2:#121212; --ink:#eaeaea; --muted:#bdbdbd; --neon:#ff1744; --neonD:#d50000; --stroke:#2a2a2a; --card:#111111; }
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;background:linear-gradient(180deg,var(--black),var(--black2));color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Inter,Arial,sans-serif}
-    a{color:var(--neon);text-decoration:none} img{max-width:100%;display:block}
-    .neon-shadow{box-shadow:0 0 18px rgba(255,23,68,.35), 0 0 36px rgba(255,23,68,.15)}  
-        /* ===== Mobile nav (hamburger) ===== */
-    .nav { position: sticky; top: 0; z-index: 50; }
-    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    
-    /* Button hidden on desktop */
-    .nav-toggle{
-      display:none;
-      background:transparent;
-      border:0;
-      color:#ff3e66;            /* neon red to match brand */
-      font-size:1.6rem;
-      line-height:1;
-      padding:8px;
-      cursor:pointer;
-    }
-    
-    /* Mobile layout */
-    @media (max-width: 768px){
-      .brand img{ height:32px; width:auto; object-fit:contain; }
-      .brand .name{ font-size:18px; white-space:nowrap; }
-    
-      .nav-toggle{ display:block; }
-    
-      /* Hide links by default on mobile */
-      .nav-links{
-        display:none;
-        position:absolute;
-        top:56px; left:0; right:0;
-        background:#0d0d11;
-        border-top:1px solid rgba(255,255,255,.08);
-        padding:12px 16px;
-        flex-direction:column;
-        gap:12px;
-      }
-    
-      /* When nav has .open, show the drawer */
-      .nav.open .nav-links{ display:flex; }
-    
-      /* Make buttons/links a touch friendlier */
-      .nav-links a{ padding:10px 6px; }
-      .nav-links .btn{ padding:12px 14px; align-self:flex-start; }
-    }
-    
-    /* Ultra-small phones: hide long brand text if it wraps */
-    @media (max-width: 390px){
-      .brand .name{ display:none; }
-    }
+    /* Reset */
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Segoe UI',sans-serif;background:#0d0d11;color:#fff;line-height:1.5;}
+    a{text-decoration:none;}
 
     /* NAV */
-    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.55);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
-    .brand{display:flex;gap:12px;align-items:center;min-height:48px}
-        <div class="nav-inner">
-      <div class="brand">
-        <!-- your logo + name -->
-      </div>
-    
-      <!-- NEW: hamburger button -->
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-    
-      <!-- your existing links wrapper -->
-      <div class="nav-links">
-        <!-- About • Event • Gallery • Posters • FAQ • Buy Tickets -->
-      </div>
-    </div>
-    .brand img{height:48px;width:auto;object-fit:contain}
-    .brand .name{font-weight:800;letter-spacing:.4px;line-height:1}
-    .nav-links{display:flex;align-items:center;gap:26px}
-    .nav-link{display:inline-flex;align-items:center;line-height:1;padding:8px 0;color:#f36}
-    .btn{background:var(--neon);padding:10px 16px;border-radius:999px;color:white;border:1px solid rgba(255,255,255,.08)}
-    .btn:hover{background:var(--neonD)}
-    /* HERO */
-    .hero{position:relative;min-height:80vh;display:grid;place-items:center;overflow:hidden}
-    .slides{position:absolute;inset:0}
-    .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
-    .slide.active{opacity:0.85}
-    .slide img{width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(1.05) brightness(.75)}
-    .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 40%, rgba(255,23,68,.3), transparent 60%), linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.75) 75%, var(--black) 100%)}
-    .hero-inner{position:relative;z-index:2;text-align:center;padding:40px 20px;max-width:900px}
-    .eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-size:.9rem;margin-bottom:16px}
-    h1{font-size:clamp(2rem,5vw,3.5rem);margin:0;line-height:1.12}
-    .hero p{color:#eee;opacity:.95;margin:14px auto 22px;max-width:720px}
-    .cta{display:inline-flex;gap:10px;align-items:center;background:var(--neon);color:white;padding:14px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.12)}
-    .cta.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
-    .cta:hover{filter:brightness(.95)}
-    .info-bar{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:18px}
-    .chip{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;color:#ddd;font-size:.95rem}
-    section{padding:70px 20px} .container{max-width:1200px;margin:auto} .section-title{text-align:center;margin-bottom:20px;color:#fff} .muted{text-align:center;color:var(--muted);max-width:760px;margin:0 auto 32px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    .card h3{margin:8px 0 6px;color:var(--neon)} .card p{margin:0;color:#d0d0d0}
-    .band{position:relative;min-height:40vh;display:grid;place-items:center;background-attachment:fixed;background-position:center;background-size:cover}
-    .band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.85))}
-    .band .inside{position:relative;z-index:2;text-align:center}
-    .tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .price{background:linear-gradient(180deg, #1b1b1b, #0f0f0f);border:1px solid var(--stroke);border-radius:18px;padding:28px}
-    .price h3{margin:0 0 6px;color:var(--neon)} .value{font-size:2rem;font-weight:800;margin:10px 0;color:#fff}
-    .price ul{list-style:none;padding:0;margin:14px 0 0} .price li{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.12)} .price li:last-child{border-bottom:none}
-    .buy{margin-top:16px;display:inline-block}
-    .gallery{columns:1;column-gap:12px} .gallery img{width:100%;border-radius:14px;border:1px solid var(--stroke);margin:0 0 12px;break-inside:avoid}
-    @media(min-width:640px){.gallery{columns:2}} @media(min-width:960px){.gallery{columns:3}}
-    .faq{max-width:900px;margin:0 auto} .faq-item{border:1px solid var(--stroke);border-radius:14px;background:#0f0f0f;margin:10px 0;overflow:hidden}
-    .faq-q{width:100%;text-align:left;background:transparent;color:#fff;padding:16px 18px;font-size:1.05rem;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-    .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 18px} .faq-a p{margin:12px 0 18px;color:#ccc}
-    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .quote{background:#0f0f0f;border:1px solid var(--stroke);border-radius:16px;padding:20px;position:relative}
-    .quote::before{content:"";position:absolute;top:-10px;left:12px;font-size:3rem;color:var(--neon);opacity:.35}
-    .quote p{margin:8px 0;color:#d0d0d0} .who{color:#fff;font-weight:600;margin-top:8px}
-    .sponsors{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:center;opacity:.9}
-    .sponsor{background:#0f0f0f;border:1px dashed var(--stroke);border-radius:12px;display:grid;place-items:center;height:70px;color:#aaa}
-    footer{background:#070707;padding:40px 20px;border-top:1px solid rgba(255,255,255,.06);text-align:center;color:#aaa} footer .row{max-width:1200px;margin:auto;display:grid;gap:16px}
-    .center{text-align:center} .stack{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    @media(max-width:960px){.grid-3,.tickets,.testimonials,.sponsors{grid-template-columns:1fr 1fr}}
-    @media(max-width:640px){.grid-3,.tickets,.testimonials,.sponsors{grid-template-columns:1fr} .nav .hide-sm{display:none}}
-    .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease, transform .5s ease} .reveal.show{opacity:1;transform:none}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.85);border-bottom:1px solid rgba(255,255,255,.08);}
+    .nav-inner{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 20px;}
+    .brand{display:flex;align-items:center;gap:10px;}
+    .brand img{height:40px;width:auto;object-fit:contain;}
+    .brand .name{font-weight:800;letter-spacing:.5px;}
+    .nav-menu{display:flex;align-items:center;gap:24px;}
+    .nav-menu a{color:#ff2f55;}
+    .btn.buy{padding:10px 16px;border-radius:999px;background:#ff2f55;color:#fff !important;font-weight:600;}
+    .nav-toggle{display:none;background:transparent;border:0;color:#ff2f55;font-size:1.6rem;cursor:pointer;}
+    @media(max-width:768px){
+      .nav-toggle{display:block;}
+      .nav-menu{display:none;position:absolute;top:56px;left:0;right:0;background:#0e0e12;flex-direction:column;padding:12px 16px;gap:12px;}
+      .nav.open .nav-menu{display:flex;}
+      .brand img{height:32px;}
+      .brand .name{font-size:18px;}
+    }
+    @media(max-width:390px){.brand .name{display:none;}}
+
+    /* Hero */
+    .hero{background:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      text-align:center;padding:120px 20px;position:relative;}
+    .hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.6);}
+    .hero > *{position:relative;z-index:1;}
+    .hero-title{font-size:3rem;font-weight:900;color:#ff2f55;margin-bottom:8px;text-shadow:0 0 12px rgba(255,47,85,.6);}
+    .hero-tagline{font-size:1.3rem;color:#f5e7ff;margin-bottom:22px;}
+    .hero .cta{display:inline-block;padding:14px 26px;background:#ff2f55;border-radius:999px;color:#fff;font-weight:600;}
+
+    /* Sections */
+    section{padding:70px 20px;max-width:1000px;margin:auto;}
+    section h2{text-align:center;font-size:2rem;color:#ff2f55;margin-bottom:30px;}
+
+    /* Tickets */
+    .tickets{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+    .price{background:#16161c;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px;text-align:center;}
+    .price h3{margin-bottom:10px;color:#ff2f55;}
+    .value{font-size:1.8rem;font-weight:700;margin-bottom:14px;}
+    .price ul{list-style:none;margin-bottom:14px;color:#ccc;}
+    .price li{margin:6px 0;}
+    .price .cta{display:inline-block;padding:10px 16px;background:#ff2f55;border-radius:999px;color:#fff;}
+
+    /* Gallery */
+    .gallery{columns:2;gap:14px;}
+    .gallery img{width:100%;border-radius:12px;margin-bottom:14px;}
+    @media(min-width:900px){.gallery{columns:3;}}
+
+    /* FAQ */
+    .faq-item{margin-bottom:14px;border:1px solid rgba(255,255,255,.12);border-radius:10px;overflow:hidden;}
+    .faq-q{background:#16161c;color:#ff2f55;width:100%;padding:12px;border:0;text-align:left;font-weight:600;cursor:pointer;}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 12px;}
+    .faq-a p{margin:12px 0;}
+
+    /* Footer */
+    footer{text-align:center;background:#0b0b0f;padding:30px 20px;font-size:.9rem;color:#aaa;}
+    footer a{color:#ff2f55;}
   </style>
-</head>  
-<script>
-  const nav = document.querySelector('.nav');
-  const btn = document.querySelector('.nav-toggle');
-  btn?.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(isOpen));
-  }, { passive: true });
-</script>
+</head>
 <body>
-  <div class="nav">
+  <!-- Nav -->
+  <nav class="nav">
     <div class="nav-inner">
-      <div class="brand">
-        <img src="logo-hos[1].png" alt="House of Sinha logo" />
-        <span class="name">House of Sinha</span>
+      <a href="#top" class="brand"><img src="logo-hos.png" alt="HOS logo"><span class="name">House of Sinha</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <div class="nav-menu">
+        <a href="#about">About</a>
+        <a href="#details">Event</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://fatso.ma/2rF5" target="_blank" class="btn buy">🎟️ Buy Tickets</a>
       </div>
-      <div class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#details" class="nav-link">Event</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-        <a href="https://fatso.ma/2rF5" target="_blank" class="btn neon-shadow">🎟️ Buy Tickets</a>
+    </div>
+  </nav>
 
-      </div>
-    </div>
-  </div>
-
-  <header class="hero">
-    <div class="slides">
-      <div class="slide active"><img src="https://images.unsplash.com/photo-1506157786151-b8491531f063" alt="Club lights red"></div>
-      <div class="slide"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="DJ console"></div>
-      <div class="slide"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819" alt="Crowd with lights"></div>
-    </div>
-    <div class="hero-inner reveal">
-      <span class="eyebrow">Coventry ✦ Birmingham ✦ Warwick</span>
-      <h1 class="hero-title">Diwali Bash</h1>
-      <p class="hero-tagline">Too Glam to give a Dhamaka!</p>
-      <p>Diwali Night 2025 at <strong>Kasbah</strong> — Thursday, <strong>16 October</strong>, 7:00 PM • Dress Code: <em>Desi/Ethnic</em></p>
-      <div class="stack center">
-        <a href="https://fatso.ma/2rF5" target="_blank" class="cta neon-shadow">🎟️ Buy Tickets</a>
-        <a href="#gallery" class="cta secondary">✨ See the Vibe</a>
-      </div>
-      <div class="info-bar">
-        <span class="chip">Eco‑friendly firecrackers</span>
-        <span class="chip">Live DJ & Bollywood</span>
-        <span class="chip">Food & drinks</span>
-      </div>
-    </div>
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <h1 class="hero-title">Diwali Bash</h1>
+    <p class="hero-tagline">Too Glam to give a Dhamaka!</p>
+    <a href="https://fatso.ma/2rF5" target="_blank" class="cta">Buy Tickets</a>
   </header>
 
-  <section id="about" class="reveal">
-    <div class="container">
-      <h2 class="section-title">About Us</h2>
-      <p class="muted">Organized by <strong>Vamika, Om & Vivek</strong>. We bring Coventry, Birmingham & Warwick together for an unforgettable Diwali night — a premium club vibe with community warmth.</p>
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center">We’re Vamika, Om & Vivek — bringing together Diwali celebrations with a nightlife vibe across Coventry, Birmingham & Warwick.</p>
+  </section>
 
-      <h2 class="section-title" style="margin-top:40px">Highlights</h2>
-      <div class="grid-3">
-        <div class="card"><h3>🎶 Music & Dance</h3><p>Bollywood, Punjabi & global hits all night. Come ready to groove.</p></div>
-        <div class="card"><h3>🍴 Food & Drinks</h3><p>Festive bites, vegetarian options and classy mocktails.</p></div>
-        <div class="card"><h3>✨ Eco-friendly Firecrackers</h3><p>Enjoy the sparkle safely and responsibly.</p></div>
-      </div>
+  <!-- Event -->
+  <section id="details">
+    <h2>Event Details</h2>
+    <p style="text-align:center">📅 Thursday 16 Oct 2025 • 10 PM<br>📍 Kasbah, Coventry<br>👗 Dress Code: Desi/Ethnic<br>✨ Eco-friendly firecrackers provided</p>
+    <div class="tickets">
+      <div class="price"><h3>Phela Damaka</h3><div class="value"></div><ul><li>Limited tickets</li><li>Fast entry</li></ul><a href="https://fatso.ma/2rF5" target="_blank" class="cta">Buy Now</a></div>
+      <div class="price"><h3>Dusra Dhamaka</h3><div class="value">£Y</div><ul><li>Standard entry</li><li>Access all areas</li></ul><a href="https://fatso.ma/2rF5" target="_blank" class="cta">Buy Now</a></div>
+      <div class="price"><h3>V.I.P. (4)</h3><div class="value">£Z</div><ul><li>Save with friends</li><li>Group photo</li></ul><a href="https://fatso.ma/2rF5" target="_blank" class="cta">Buy Now</a></div>
     </div>
   </section>
 
-  <section class="band" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');">
-    <div class="inside">
-      <h2 class="section-title">Celebrate Together</h2>
-      <p class="muted">One community • One unforgettable night • Too Glam to give a Dhamaka!</p>
-      <div class="stack"><a href="#tickets" class="cta">Reserve Your Spot</a></div>
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1604668915840-2073a1f95b3e?auto=format&fit=crop&w=800&q=80" alt="Sparklers">
+      <img src="https://images.unsplash.com/photo-1603899123709-6f8f61a1b5e3?auto=format&fit=crop&w=800&q=80" alt="Rangoli">
+      <img src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?auto=format&fit=crop&w=800&q=80" alt="Diyas">
+      <img src="https://images.unsplash.com/photo-1572276596237-5db2c3a56c0d?auto=format&fit=crop&w=800&q=80" alt="Dance floor">
     </div>
   </section>
 
-  <section id="details" class="reveal">
-  <div class="container">
-    <h2 class="section-title">Event Details</h2>
-    <p class="muted">📅 Thursday, 16 October 2025 • 🕖 7:00 PM • 📍 Venue: <strong>Kasbah</strong> • 👗 Dress Code: Desi/Ethnic</p>
-    <div class="tickets" id="tickets">
-
-      <div class="price">
-        <h3>Pehla Dhamaka</h3>
-        <div class="value"></div>
-        <ul>
-          <li>Limited quantity</li>
-          <li>Fast entry</li>
-          <li>Free glow band</li>
-        </ul>
-        <a class="cta buy" href="https://fatso.ma/2rF5" target="_blank">Buy Now</a>
-      </div>
-
-      <div class="price">
-        <h3>Dusra Dhamaka</h3>
-        <div class="value"></div>
-        <ul>
-          <li>Standard entry</li>
-          <li>Access to all zones</li>
-          <li>Re-entry allowed</li>
-        </ul>
-        <a class="cta buy" href="https://fatso.ma/2rF5" target="_blank">Buy Now</a>
-      </div>
-
-      <div class="price">
-        <h3>V.I.P. (4)</h3>
-        <div class="value"></div>
-        <ul>
-          <li>Save as a crew</li>
-          <li>Priority group entry</li>
-          <li>Group Table</li>
-        </ul>
-        <a class="cta buy" href="https://fatso.ma/2rF5" target="_blank">Buy Now</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
- <div class="gallery">
-  <img src="g1.jpg" alt="Club Celebration" loading="lazy">
-  <img src="g2.jpg" alt="Sparkels and Crackers" loading="lazy">
-  <img src="g3.jpg" alt="Champagne Bottles" loading="lazy">
-</div>
-
-
-<section class="reveal">
-  <div class="container">
-    <h2 class="section-title">What People Say</h2>
-    <div class="testimonials">
-      <div class="quote">
-        <p>“Electric atmosphere — it felt like Mumbai nightlife!”</p>
-        <div class="who">— Aanya, Coventry</div>
-      </div>
-      <div class="quote">
-        <p>“Music was on point and super friendly crowd.”</p>
-        <div class="who">— Rohan, Warwick</div>
-      </div>
-      <div class="quote">
-        <p>“Well organized, vibrant, and Insta-worthy throughout.”</p>
-        <div class="who">— Meera, Birmingham</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section id="faq" class="reveal">
-    <div class="container faq">
-      <h2 class="section-title">FAQ</h2>
-      <div class="faq-item"><button class="faq-q">Do I need to bring an ID? <span>＋</span></button><div class="faq-a"><p>Yes, bring a valid photo ID if the venue requests it or for age‑restricted purchases.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Are tickets refundable? <span>＋</span></button><div class="faq-a"><p>Tickets are non‑refundable but transferable — share the QR/confirmation email.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Can non‑students attend? <span>＋</span></button><div class="faq-a"><p>Absolutely! Everyone is welcome to celebrate with us.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Is the venue accessible? <span>＋</span></button><div class="faq-a"><p>Yes, wheelchair accessible. Email us for accommodations.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Dress code? <span>＋</span></button><div class="faq-a"><p>Desi/Ethnic encouraged. Comfortable shoes for the dance floor!</p></div></div>
-    </div>
+  <!-- FAQ -->
+  <section id="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item"><button class="faq-q">Do I need ID?</button><div class="faq-a"><p>Yes, please bring valid ID.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Refund policy?</button><div class="faq-a"><p>Tickets are non-refundable but transferable.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Is it student-only?</button><div class="faq-a"><p>No, all are welcome.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Accessibility?</button><div class="faq-a"><p>Venue is wheelchair accessible. Contact us for support.</p></div></div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <div class="row">
-      <p><strong>Contact</strong> • <a href="mailto:houseofsinha@gmail.com">houseofsinha@gmail.com</a> • <a href="https://instagram.com/houseofsinha" target="_blank">@houseofsinha</a> • WhatsApp: Join via QR on poster</p>
-      <p>© 2025 House of Sinha. Designed with ❤ for the community.</p>
-    </div>
+    <p>&copy; 2025 House of Sinha. All rights reserved.</p>
+    <p><a href="https://houseofsinha.com">houseofsinha.com</a> | 
+       <a href="mailto:houseofsinhahos@gmail.com">houseofsinhahos@gmail.com</a> | 
+       <a href="https://instagram.com/houseofsinhaaaa" target="_blank">@houseofsinhaaaa</a></p>
   </footer>
 
   <script>
-    const slides = document.querySelectorAll('.slide');
-    let i = 0; setInterval(()=>{slides[i].classList.remove('active'); i=(i+1)%slides.length; slides[i].classList.add('active')}, 4000);
-    const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });},{threshold: .15});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-    document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const a = btn.parentElement.querySelector('.faq-a');const open = a.style.maxHeight && a.style.maxHeight !== '0px';document.querySelectorAll('.faq-a').forEach(x=>x.style.maxHeight='0px');document.querySelectorAll('.faq-q span').forEach(s=>s.textContent='＋');if(!open){ a.style.maxHeight=a.scrollHeight+'px'; btn.querySelector('span').textContent='−'; }});});
+    // FAQ toggle
+    document.querySelectorAll('.faq-q').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const ans = btn.nextElementSibling;
+        ans.style.maxHeight = ans.style.maxHeight ? null : ans.scrollHeight+'px';
+      });
+    });
+    // Hamburger
+    const nav=document.querySelector('.nav'), toggle=document.querySelector('.nav-toggle');
+    toggle?.addEventListener('click',()=>{
+      nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
+    });
   </script>
+</body>
+</html>
+
 </body>
 </html>
