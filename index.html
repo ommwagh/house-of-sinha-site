@@ -121,51 +121,6 @@
       </div>
     </div>
   </header>
-  <!-- … (About, Band, Details, Gallery, Testimonials, FAQ, Footer) — keep your original sections here … -->
-
-  <!-- SLIDES / REVEAL / FAQ JS -->
-  <script>
-    // hamburger
-    const nav = document.querySelector('.nav');
-    const btn = document.querySelector('.nav-toggle');
-    btn?.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(open));
-    }, { passive: true });
-
-    // slides
-    const slides = document.querySelectorAll('.slide');
-    let i = 0; setInterval(() => {
-      slides[i].classList.remove('active');
-      i = (i + 1) % slides.length;
-      slides[i].classList.add('active');
-    }, 4000);
-
-    // reveal on scroll
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
-    }, { threshold: .15 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // FAQ
-    document.querySelectorAll('.faq-q').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const a = btn.parentElement.querySelector('.faq-a');
-        const open = a.style.maxHeight && a.style.maxHeight !== '0px';
-        document.querySelectorAll('.faq-a').forEach(x => x.style.maxHeight = '0px');
-        document.querySelectorAll('.faq-q span').forEach(s => s.textContent = '＋');
-        if (!open) { a.style.maxHeight = a.scrollHeight + 'px'; btn.querySelector('span').textContent = '−'; }
-      });
-    });
-  </section>
-  <section class="band" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');">
-    <div class="inside">
-      <h2 class="section-title">Celebrate Together</h2>
-      <p class="muted">One community • One unforgettable night • Too Glam to give a Dhamaka!</p>
-      <div class="stack"><a href="#tickets" class="cta">Reserve Your Spot</a></div>
-    </div>
-  </section>
-
   <section id="details" class="reveal">
   <div class="container">
     <h2 class="section-title">Event Details</h2>
